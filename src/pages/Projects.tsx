@@ -10,8 +10,8 @@ const Projects = () => {
       highlights: ['98% detection accuracy', 'Real-time chat support', 'AI-powered recommendations'],
       color: 'from-cyan-400 to-cyan-600',
       category: 'Full Stack',
-      githubUrl: 'h',
-      liveUrl: 'https://mental-health-counselling.vercel.app'
+      githubUrl: 'https://github.com/Srimunn/counselling_datafication',
+      liveUrl: 'https://mindfree-70f04.web.app/'
     },
     {
       title: 'Portfolio Website',
@@ -20,7 +20,7 @@ const Projects = () => {
       highlights: ['Modern UI/UX', 'Responsive Design', 'Performance Optimized'],
       color: 'from-purple-400 to-purple-600',
       category: 'Frontend',
-      githubUrl: 'https://github.com/Srimun/srimun-kinetic-glow',
+      githubUrl: 'https://github.com/Srimunn/portfolio_website',
       liveUrl: 'https://srimun.vercel.app'
     },
     {
@@ -30,8 +30,8 @@ const Projects = () => {
       highlights: ['Unique user ID integration', 'Instant QR code generation', 'Easy third-party system integration'],
       color: 'from-teal-400 to-teal-600',
       category: 'Web App',
-      githubUrl: 'https://github.com/Srimun/qr-code-srimun-id',
-      liveUrl: 'https://qr-code-srimun-id.vercel.app'
+      githubUrl: 'https://github.com/Srimunn/QR-Code-generator',
+      liveUrl: 'https://qr-code-generator-srimun.web.app/'
     },
     {
       title: 'AI Offline Help System',
