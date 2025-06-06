@@ -4,6 +4,36 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: 'AYUSH Virtual Herbal Garden',
+      description: 'A comprehensive digital platform showcasing medicinal plants and herbs with detailed information about their properties and uses. Built using modern web technologies with 3D plant models and an interactive UI for educational purposes.',
+      technologies: ['React.js', 'Node.js', 'MongoDB Atlas', 'Three.js', 'HTML/CSS', 'JavaScript', 'Blender'],
+      highlights: [
+        '3D Models created in Blender (.glb format)',
+        'Frontend: React.js, Backend: Node.js',
+        '3D Rendering: Three.js',
+        'Database: MongoDB Atlas'
+      ],
+      color: 'from-emerald-400 to-emerald-600',
+      category: 'Full Stack',
+      githubUrl: 'https://github.com/Srimunn/Ayush-hackathon',
+     
+    },
+    {
+      title: 'Attendance Management System',
+      description: 'An automated system for tracking and managing student attendance using facial recognition technology. This project uses AI to automate the traditional attendance marking process.',
+      technologies: ['Python', 'OpenCV', 'Pandas', 'FaceNet', 'Tkinter', 'SQLite'],
+      highlights: [
+        'Face recognition using FaceNet',
+        'GUI using Tkinter',
+        'Local server deployment or Streamlit cloud option',
+        'Dataset of 60+ student images in JPEG/PNG'
+      ],
+      color: 'from-blue-400 to-blue-600',
+      category: 'AI/ML',
+      githubUrl: 'https://github.com/Srimunn/Attedence_management',
+      liveUrl: null
+    },
+    {
       title: 'Mental Health Counseling App',
       description: 'A comprehensive MERN stack application with AI integration for mental health support. Features real-time chat, mood tracking, and personalized recommendations.',
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'AI/ML'],

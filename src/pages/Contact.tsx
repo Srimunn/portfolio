@@ -18,7 +18,7 @@ const Contact = () => {
 
     try {
       console.log('Sending form data:', formData);
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const response = await fetch('https://srimun-portfolio-2024.web.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

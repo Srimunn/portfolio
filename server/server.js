@@ -7,11 +7,10 @@ import { body, validationResult } from 'express-validator';
 // Load environment variables
 dotenv.config();
 
-// Debug: Log email configuration (remove sensitive info)
-console.log('Email Configuration:', {
-  user: process.env.EMAIL_USER,
-  hasPassword: !!process.env.EMAIL_APP_PASSWORD
-});
+if (!process.env.EMAIL_USER || !process.env.EMAIL_APP_PASSWORD) {
+  console.error('Missing required environment variables. Please check your .env file.');
+  process.exit(1);
+}
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -22,12 +21,14 @@ app.use(express.json());
 
 // Email transporter setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_APP_PASSWORD
   },
-  debug: true // Enable debug mode
+  debug: true
 });
 
 // Verify transporter connection
@@ -62,8 +63,12 @@ app.post('/api/contact', validateContactForm, async (req, res) => {
 
     // Email options
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'itsmesrimun@gmail.com', // Your email
+      from: {
+        name: name,
+        address: process.env.EMAIL_USER
+      },
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -73,14 +78,6 @@ app.post('/api/contact', validateContactForm, async (req, res) => {
         <p>${message}</p>
       `
     };
-
-    console.log('Attempting to send email with options:', {
-      ...mailOptions,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: '****' // Hide password in logs
-      }
-    });
 
     // Send email
     const info = await transporter.sendMail(mailOptions);

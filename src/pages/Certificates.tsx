@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download, Award, Calendar, Building, FileText, ExternalLink, Trophy, Users } from 'lucide-react';
+import { Download, Award, Calendar, Building, FileText, ExternalLink, Trophy } from 'lucide-react';
 
 interface Certificate {
   id: number;
@@ -260,7 +260,7 @@ const Certificates = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {filteredCertificates.map((certificate, index) => (
@@ -289,7 +289,7 @@ const Certificates = () => {
                 {certificate.description}
               </p>
 
-              <div className="flex space-x-2">
+              <div className="flex gap-2">
                 <button
                   onClick={() => handleViewCertificate(certificate)}
                   className="flex-1 px-4 py-2 bg-gradient-to-r from-teal-500 to-purple-500 rounded-lg text-white text-sm font-medium hover:shadow-lg transition-all duration-300"
