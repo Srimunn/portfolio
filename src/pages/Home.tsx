@@ -127,7 +127,7 @@ const Home = () => {
               </Link>
 
               <a
-                href="/my_resume-1.pdf"
+                href="/certificates/Srimun_S_S_resume.pdf"
                 download
                 className="group px-8 py-4 border-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
                 style={{ 
