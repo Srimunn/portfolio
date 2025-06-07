@@ -18,7 +18,8 @@ const Contact = () => {
 
     try {
       console.log('Sending form data:', formData);
-      const response = await fetch('https://srimun-portfolio-2024.web.app/api/contact', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,21 +72,21 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'Connect with me',
-      href: 'https://linkedin.com/in/srimun',
+      href: 'www.linkedin.com/in/srimun',
       color: 'text-blue-400'
     },
     {
       icon: Github,
       label: 'GitHub',
       value: 'View my code',
-      href: 'https://github.com/srimun',
+      href: 'https://github.com/Srimunn',
       color: 'text-gray-400'
     },
     {
       icon: Code,
       label: 'LeetCode',
       value: 'Check my solutions',
-      href: 'https://leetcode.com/srimun',
+      href: 'https://leetcode.com/u/Srimun_SS/',
       color: 'text-teal-400'
     }
   ];
