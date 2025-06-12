@@ -72,7 +72,7 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'Connect with me',
-      href: 'www.linkedin.com/in/srimun',
+      href: 'https://www.linkedin.com/in/srimun',
       color: 'text-blue-400'
     },
     {
@@ -86,7 +86,7 @@ const Contact = () => {
       icon: Code,
       label: 'LeetCode',
       value: 'Check my solutions',
-      href: 'https://leetcode.com/u/Srimun_SS/',
+      href: 'https://leetcode.com/Srimun_SS',
       color: 'text-teal-400'
     }
   ];
